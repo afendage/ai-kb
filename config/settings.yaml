@@ -1,0 +1,43 @@
+site:
+  base_url: "https://uat02.uwingame.fun"
+  locale: "en"
+  register_path: "/en/?modal=register&tab=account"
+  login_path: "/en/?modal=login"
+
+browser:
+  name: "chrome"
+  headless: false
+  window_size: "1920,1080"
+  implicit_wait: 10
+  page_load_timeout: 60
+
+registration:
+  email_domain: "gmail.com"
+  password_length: 12
+  referral_code: ""
+
+behavior:
+  duration_sec: 60
+  action_delay_min: 1.0
+  action_delay_max: 3.0
+  scroll_steps: 3
+  enable_random_clicks: true
+
+selectors:
+  register:
+    email_tab: "button.u-btn.active"
+    mobile_tab: "button.u-btn"
+    email_input: "#email"
+    username_input: "#username"
+    password_input: "#password"
+    referral_input: "#referralCode"
+    submit_button: "button.btn.van-button--primary"
+    success_indicators:
+      - ".van-toast"
+      - "[class*='success']"
+  home:
+    login_button: "button.btn1"
+    register_button: "button.btn2"
+    buy_crypto_button: "button.van-button--primary"
+    bet_tabs: "button.u-btn"
+    view_more_button: "button.btn"
